@@ -11,6 +11,15 @@
 </head>
 <body>
 
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-pacman">
+    <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#3fc6e0"/><circle cx="28" cy="36" r="5" fill="#1f2226"/><circle cx="52" cy="36" r="5" fill="#1f2226"/><path d="M26 50c6 8 22 8 28 0" stroke="#1f2226" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+  </div>
+  <div class="preloader-bar"><span></span></div>
+</div>
+
+<div id="pageShell">
+
 <header class="site-header">
   <div class="container header-inner">
     <a href="#" class="logo">
@@ -52,7 +61,10 @@
     <div class="container hero-inner">
       <div class="hero-content">
         <p class="eyebrow">Werbetechnik · Veredelung · Individualisierung</p>
-        <h1>Werbung, die auffällt.<br>Ideen, die bleiben.</h1>
+        <h1>
+          <span class="headline-line push-line">Werbung, die auffällt.</span>
+          <span class="headline-line second-line">Ideen, die bleiben.</span>
+        </h1>
         <p class="hero-text">Beschriftung, Bestickung, Textildruck, Lasergravur und individuelle Werbeprodukte – persönlich beraten und kreativ umgesetzt von Creative Werbetechnik 24.</p>
         <div class="hero-btns">
           <a href="#kategorien" class="btn btn-primary">Produkte entdecken</a>
@@ -68,7 +80,7 @@
       <div class="hero-visual">
         <div class="hero-blob" aria-hidden="true"></div>
 
-        <div class="hero-card hero-card-question">
+        <div class="hero-card hero-card-question float-card">
           <p class="hero-card-title">Was darf es sein?</p>
           <p class="hero-card-text">Von der Beschriftung bis zur Lasergravur: schnell zur passenden Kategorie.</p>
           <div class="chips">
@@ -95,7 +107,7 @@
           <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="#3fc6e0"/><circle cx="28" cy="36" r="5" fill="#1f2226"/><circle cx="52" cy="36" r="5" fill="#1f2226"/><path d="M26 52c6 8 22 8 28 0" stroke="#1f2226" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
         </div>
 
-        <div class="hero-card hero-card-tag">
+        <div class="hero-card hero-card-tag float-card">
           <p><strong>Persönlich</strong> statt<br>anonym.</p>
           <p class="hero-card-sub">Immer Creative24 denken echte Menschen, echte Ideen und direkte Beratung.</p>
         </div>
@@ -115,48 +127,131 @@
       </div>
 
       <div class="category-grid">
-        <a href="#" class="category-card cat-1">
-          <span class="cat-badge">01</span>
-          <div class="cat-info">
-            <h3>Beschriftung</h3>
-            <p>Individuelle Beschriftungen für Fahrzeuge, Fassaden, Schaufenster und mehr.</p>
+        <div class="category-card" data-flip>
+          <div class="category-card-inner">
+            <a href="#" class="category-front cat-1">
+              <span class="cat-badge">01</span>
+              <div class="cat-info">
+                <h3>Beschriftung</h3>
+                <p>Individuelle Beschriftungen für Fahrzeuge, Fassaden, Schaufenster und mehr.</p>
+              </div>
+            </a>
+            <div class="category-back">
+              <p class="category-back-label">Beispiele ansehen</p>
+              <div class="category-thumbs">
+                <span class="category-thumb thumb-1"></span>
+                <span class="category-thumb thumb-2"></span>
+                <span class="category-thumb thumb-3"></span>
+              </div>
+              <a href="#" class="category-back-link">Beschriftung entdecken →</a>
+            </div>
           </div>
-        </a>
-        <a href="#" class="category-card cat-2">
-          <span class="cat-badge">02</span>
-          <div class="cat-info">
-            <h3>Bestickung</h3>
-            <p>Hochwertige Textilveredelung für ein einprägsames und professionelles Auftritt.</p>
+        </div>
+
+        <div class="category-card" data-flip>
+          <div class="category-card-inner">
+            <a href="#" class="category-front cat-2">
+              <span class="cat-badge">02</span>
+              <div class="cat-info">
+                <h3>Bestickung</h3>
+                <p>Hochwertige Textilveredelung für ein einprägsames und professionelles Auftritt.</p>
+              </div>
+            </a>
+            <div class="category-back">
+              <p class="category-back-label">Beispiele ansehen</p>
+              <div class="category-thumbs">
+                <span class="category-thumb thumb-2"></span>
+                <span class="category-thumb thumb-4"></span>
+                <span class="category-thumb thumb-1"></span>
+              </div>
+              <a href="#" class="category-back-link">Bestickung entdecken →</a>
+            </div>
           </div>
-        </a>
-        <a href="#" class="category-card cat-3">
-          <span class="cat-badge">03</span>
-          <div class="cat-info">
-            <h3>Textildruck</h3>
-            <p>Shirts, Hoodies und weitere Textilien individuell bedruckt und gestaltet.</p>
+        </div>
+
+        <div class="category-card" data-flip>
+          <div class="category-card-inner">
+            <a href="#" class="category-front cat-3">
+              <span class="cat-badge">03</span>
+              <div class="cat-info">
+                <h3>Textildruck</h3>
+                <p>Shirts, Hoodies und weitere Textilien individuell bedruckt und gestaltet.</p>
+              </div>
+            </a>
+            <div class="category-back">
+              <p class="category-back-label">Beispiele ansehen</p>
+              <div class="category-thumbs">
+                <span class="category-thumb thumb-3"></span>
+                <span class="category-thumb thumb-1"></span>
+                <span class="category-thumb thumb-5"></span>
+              </div>
+              <a href="#" class="category-back-link">Textildruck entdecken →</a>
+            </div>
           </div>
-        </a>
-        <a href="#" class="category-card cat-4">
-          <span class="cat-badge">04</span>
-          <div class="cat-info">
-            <h3>Lasergravur</h3>
-            <p>Präzise Gravuren für individuelle Produkte, Geschenke und Werbeartikel.</p>
+        </div>
+
+        <div class="category-card" data-flip>
+          <div class="category-card-inner">
+            <a href="#" class="category-front cat-4">
+              <span class="cat-badge">04</span>
+              <div class="cat-info">
+                <h3>Lasergravur</h3>
+                <p>Präzise Gravuren für individuelle Produkte, Geschenke und Werbeartikel.</p>
+              </div>
+            </a>
+            <div class="category-back">
+              <p class="category-back-label">Beispiele ansehen</p>
+              <div class="category-thumbs">
+                <span class="category-thumb thumb-4"></span>
+                <span class="category-thumb thumb-5"></span>
+                <span class="category-thumb thumb-2"></span>
+              </div>
+              <a href="#" class="category-back-link">Lasergravur entdecken →</a>
+            </div>
           </div>
-        </a>
-        <a href="#" class="category-card cat-5">
-          <span class="cat-badge">05</span>
-          <div class="cat-info">
-            <h3>Ballons</h3>
-            <p>Für Feiern, Events und besondere Momente – dekorativ und individuell.</p>
+        </div>
+
+        <div class="category-card" data-flip>
+          <div class="category-card-inner">
+            <a href="#" class="category-front cat-5">
+              <span class="cat-badge">05</span>
+              <div class="cat-info">
+                <h3>Ballons</h3>
+                <p>Für Feiern, Events und besondere Momente – dekorativ und individuell.</p>
+              </div>
+            </a>
+            <div class="category-back">
+              <p class="category-back-label">Beispiele ansehen</p>
+              <div class="category-thumbs">
+                <span class="category-thumb thumb-5"></span>
+                <span class="category-thumb thumb-3"></span>
+                <span class="category-thumb thumb-4"></span>
+              </div>
+              <a href="#" class="category-back-link">Ballons entdecken →</a>
+            </div>
           </div>
-        </a>
-        <a href="#" class="category-card cat-6">
-          <span class="cat-badge">06</span>
-          <div class="cat-info">
-            <h3>Shop</h3>
-            <p>Alle Produkte und individuellen Gestaltungsmöglichkeiten auf einen Blick.</p>
+        </div>
+
+        <div class="category-card" data-flip>
+          <div class="category-card-inner">
+            <a href="#" class="category-front cat-6">
+              <span class="cat-badge">06</span>
+              <div class="cat-info">
+                <h3>Shop</h3>
+                <p>Alle Produkte und individuellen Gestaltungsmöglichkeiten auf einen Blick.</p>
+              </div>
+            </a>
+            <div class="category-back">
+              <p class="category-back-label">Beispiele ansehen</p>
+              <div class="category-thumbs">
+                <span class="category-thumb thumb-1"></span>
+                <span class="category-thumb thumb-2"></span>
+                <span class="category-thumb thumb-3"></span>
+              </div>
+              <a href="#" class="category-back-link">Zum Shop →</a>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -222,19 +317,24 @@
       </div>
 
       <div class="portfolio-grid">
-        <div class="portfolio-item item-tall gradient-1">
+        <div class="portfolio-item work item-tall">
+          <div class="item-bg gradient-1"></div>
           <span class="portfolio-tag">Design</span>
         </div>
-        <div class="portfolio-item gradient-2">
+        <div class="portfolio-item work">
+          <div class="item-bg gradient-2"></div>
           <span class="portfolio-tag">Textildruck</span>
         </div>
-        <div class="portfolio-item gradient-3">
+        <div class="portfolio-item work">
+          <div class="item-bg gradient-3"></div>
           <span class="portfolio-tag">Lasergravur</span>
         </div>
-        <div class="portfolio-item gradient-4">
+        <div class="portfolio-item work">
+          <div class="item-bg gradient-4"></div>
           <span class="portfolio-tag">Beschriftung</span>
         </div>
-        <div class="portfolio-item gradient-5">
+        <div class="portfolio-item work">
+          <div class="item-bg gradient-5"></div>
           <span class="portfolio-tag">Ballons</span>
         </div>
       </div>
@@ -252,13 +352,15 @@
         <p class="section-lead">Ein automatischer Logo-Slider schafft Vertrauen und präsentiert Partnerschaften, ohne die Seite zu überladen. Im Vorlage sind Platzhalter enthalten, die später durch echte Partnerlogos ausgetauscht werden.</p>
       </div>
 
-      <div class="partner-grid">
-        <div class="partner-box"><span>Partner 1</span><small>Logo-Platzhalter</small></div>
-        <div class="partner-box"><span>Partner 2</span><small>Logo-Platzhalter</small></div>
-        <div class="partner-box"><span>Partner 3</span><small>Logo-Platzhalter</small></div>
-        <div class="partner-box"><span>Partner 4</span><small>Logo-Platzhalter</small></div>
-        <div class="partner-box"><span>Partner 5</span><small>Logo-Platzhalter</small></div>
-        <div class="partner-box"><span>Partner 6</span><small>Logo-Platzhalter</small></div>
+      <div class="logo-slider">
+        <div class="logo-track" id="logoTrack">
+          <div class="partner-box"><span>Partner 1</span><small>Logo-Platzhalter</small></div>
+          <div class="partner-box"><span>Partner 2</span><small>Logo-Platzhalter</small></div>
+          <div class="partner-box"><span>Partner 3</span><small>Logo-Platzhalter</small></div>
+          <div class="partner-box"><span>Partner 4</span><small>Logo-Platzhalter</small></div>
+          <div class="partner-box"><span>Partner 5</span><small>Logo-Platzhalter</small></div>
+          <div class="partner-box"><span>Partner 6</span><small>Logo-Platzhalter</small></div>
+        </div>
       </div>
     </div>
   </section>
@@ -323,6 +425,17 @@
         </span>
       </a>
       <p>Creative Werbetechnik 24 steht für individuelle Beschriftung, Bestickung und Textildruck – kreative Ideen und professionelle Umsetzung aus einer Hand.</p>
+      <div class="social-row">
+        <a href="#" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M14 8.5h2.5V5H14c-2 0-3.5 1.6-3.5 3.6V11H8v3.5h2.5V21H14v-6.5h2.3l.4-3.5H14V9c0-.3.2-.5.6-.5z" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="16" height="16"><rect x="3" y="9" width="3.4" height="11" fill="currentColor"/><circle cx="4.7" cy="4.8" r="2" fill="currentColor"/><path d="M10.5 9h3.3v1.6c.6-1 1.7-1.9 3.4-1.9 3 0 3.8 1.9 3.8 4.6V20h-3.5v-6.3c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V20h-3.4V9z" fill="currentColor"/></svg>
+        </a>
+      </div>
     </div>
 
     <div class="footer-col">
@@ -373,6 +486,8 @@
     </div>
   </div>
 </footer>
+
+</div>
 
 <script src="js/main.js"></script>
 </body>
