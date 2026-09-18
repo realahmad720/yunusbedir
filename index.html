@@ -11,6 +11,50 @@
 </head>
 <body>
 
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="icon-beschriftung" viewBox="0 0 120 120">
+      <rect x="18" y="34" width="84" height="54" rx="6" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M40 76 L58 40 L76 76 M47 62 H69" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="86" cy="30" r="7" fill="var(--accent)"/>
+      <path d="M86 37 L86 30 L79 30" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-bestickung" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="34" fill="none" stroke="currentColor" stroke-width="4"/>
+      <circle cx="60" cy="60" r="24" fill="none" stroke="currentColor" stroke-width="3" opacity=".55"/>
+      <path d="M60 36 v14 M60 70 v14 M36 60 h14 M70 60 h14" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="60" cy="60" r="5" fill="var(--accent)"/>
+    </symbol>
+    <symbol id="icon-textildruck" viewBox="0 0 120 120">
+      <path d="M40 34 L48 24 H72 L80 34 L96 42 L88 58 L80 52 V96 H40 V52 L32 58 L24 42 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="48" y="58" width="24" height="18" rx="3" fill="var(--accent)"/>
+    </symbol>
+    <symbol id="icon-lasergravur" viewBox="0 0 120 120">
+      <rect x="20" y="60" width="80" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M30 78 h60 M30 86 h44" stroke="currentColor" stroke-width="2.5" opacity=".5"/>
+      <path d="M92 24 L60 68" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="60" cy="68" r="6" fill="var(--accent)"/>
+    </symbol>
+    <symbol id="icon-ballons" viewBox="0 0 120 120">
+      <ellipse cx="46" cy="46" rx="20" ry="24" fill="none" stroke="currentColor" stroke-width="4"/>
+      <ellipse cx="78" cy="56" rx="16" ry="20" fill="var(--accent)"/>
+      <path d="M46 70 L42 92 M78 76 L74 96" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    </symbol>
+    <symbol id="icon-shop" viewBox="0 0 120 120">
+      <path d="M32 44 H88 L84 92 H36 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M44 44 V34 a16 16 0 0 1 32 0 V44" fill="none" stroke="currentColor" stroke-width="4"/>
+      <circle cx="60" cy="66" r="9" fill="var(--accent)"/>
+    </symbol>
+    <symbol id="icon-design" viewBox="0 0 120 120">
+      <rect x="24" y="24" width="46" height="46" rx="6" fill="none" stroke="currentColor" stroke-width="4"/>
+      <circle cx="78" cy="78" r="20" fill="var(--accent)"/>
+      <path d="M30 90 l14 -14 l10 8 l18 -22" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="30" cy="90" r="3" fill="currentColor"/>
+      <circle cx="72" cy="62" r="3" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="preloader-pacman">
     <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#ff6a3d"/><circle cx="28" cy="36" r="5" fill="#1f2226"/><circle cx="52" cy="36" r="5" fill="#1f2226"/><path d="M26 50c6 8 22 8 28 0" stroke="#1f2226" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
@@ -132,6 +176,7 @@
         <div class="category-card reveal" data-flip>
           <div class="category-card-inner">
             <a href="#" class="category-front cat-1">
+              <svg class="cat-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-beschriftung"></use></svg>
               <span class="cat-badge">01</span>
               <div class="cat-info">
                 <h3>Beschriftung</h3>
@@ -153,6 +198,7 @@
         <div class="category-card reveal" data-flip>
           <div class="category-card-inner">
             <a href="#" class="category-front cat-2">
+              <svg class="cat-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-bestickung"></use></svg>
               <span class="cat-badge">02</span>
               <div class="cat-info">
                 <h3>Bestickung</h3>
@@ -174,6 +220,7 @@
         <div class="category-card reveal" data-flip>
           <div class="category-card-inner">
             <a href="#" class="category-front cat-3">
+              <svg class="cat-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-textildruck"></use></svg>
               <span class="cat-badge">03</span>
               <div class="cat-info">
                 <h3>Textildruck</h3>
@@ -195,6 +242,7 @@
         <div class="category-card reveal" data-flip>
           <div class="category-card-inner">
             <a href="#" class="category-front cat-4">
+              <svg class="cat-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-lasergravur"></use></svg>
               <span class="cat-badge">04</span>
               <div class="cat-info">
                 <h3>Lasergravur</h3>
@@ -216,6 +264,7 @@
         <div class="category-card reveal" data-flip>
           <div class="category-card-inner">
             <a href="#" class="category-front cat-5">
+              <svg class="cat-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-ballons"></use></svg>
               <span class="cat-badge">05</span>
               <div class="cat-info">
                 <h3>Ballons</h3>
@@ -237,6 +286,7 @@
         <div class="category-card reveal" data-flip>
           <div class="category-card-inner">
             <a href="#" class="category-front cat-6">
+              <svg class="cat-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-shop"></use></svg>
               <span class="cat-badge">06</span>
               <div class="cat-info">
                 <h3>Shop</h3>
@@ -320,23 +370,23 @@
 
       <div class="portfolio-grid">
         <div class="portfolio-item work item-tall reveal">
-          <div class="item-bg gradient-1"></div>
+          <div class="item-bg gradient-1"><svg class="portfolio-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-design"></use></svg></div>
           <span class="portfolio-tag">Design</span>
         </div>
         <div class="portfolio-item work reveal">
-          <div class="item-bg gradient-2"></div>
+          <div class="item-bg gradient-2"><svg class="portfolio-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-textildruck"></use></svg></div>
           <span class="portfolio-tag">Textildruck</span>
         </div>
         <div class="portfolio-item work reveal">
-          <div class="item-bg gradient-3"></div>
+          <div class="item-bg gradient-3"><svg class="portfolio-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-lasergravur"></use></svg></div>
           <span class="portfolio-tag">Lasergravur</span>
         </div>
         <div class="portfolio-item work reveal">
-          <div class="item-bg gradient-4"></div>
+          <div class="item-bg gradient-4"><svg class="portfolio-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-beschriftung"></use></svg></div>
           <span class="portfolio-tag">Beschriftung</span>
         </div>
         <div class="portfolio-item work reveal">
-          <div class="item-bg gradient-5"></div>
+          <div class="item-bg gradient-5"><svg class="portfolio-icon" viewBox="0 0 120 120" aria-hidden="true"><use href="#icon-ballons"></use></svg></div>
           <span class="portfolio-tag">Ballons</span>
         </div>
       </div>

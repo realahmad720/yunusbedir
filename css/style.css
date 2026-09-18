@@ -403,6 +403,17 @@ h4 { font-size: 16px; }
   background: linear-gradient(180deg, rgba(20,22,25,.15) 0%, rgba(20,22,25,.75) 100%);
   z-index: 0;
 }
+.icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.cat-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 56px;
+  height: 56px;
+  z-index: 1;
+  color: #faf7f1;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.28));
+}
 .cat-badge, .cat-info { position: relative; z-index: 1; }
 .cat-badge {
   align-self: flex-start;
@@ -503,8 +514,21 @@ h4 { font-size: 16px; }
   transition: transform .18s ease-out, box-shadow .25s ease-out;
 }
 .item-tall { grid-row: span 2; }
-.item-bg { position: absolute; inset: 0; transition: transform .3s ease; }
+.item-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s ease;
+}
 .work:hover .item-bg { transform: scale(1.04); }
+.portfolio-icon {
+  width: 118px;
+  height: 118px;
+  color: #faf7f1;
+  filter: drop-shadow(0 12px 18px rgba(0,0,0,.35));
+}
 .work:hover { box-shadow: 0 22px 40px rgba(28,36,48,.22); }
 /* Glossy highlight that follows the cursor, like light on a laminated print */
 .work::after {
