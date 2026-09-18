@@ -44,6 +44,34 @@ body {
 .reg-mark::before { top: 50%; left: 0; width: 100%; height: 1px; transform: translateY(-50%); }
 .reg-mark::after { left: 50%; top: 0; height: 100%; width: 1px; transform: translateX(-50%); }
 
+/* Scroll reveal: elements rise into place with a slight 3D tilt */
+.reveal {
+  opacity: 0;
+  transform: perspective(900px) translateY(34px) rotateX(9deg);
+  transform-origin: 50% 100%;
+  transition: opacity .7s cubic-bezier(.22,.85,.2,1), transform .7s cubic-bezier(.22,.85,.2,1);
+  will-change: transform, opacity;
+}
+.reveal.in-view { opacity: 1; transform: perspective(900px) translateY(0) rotateX(0deg); }
+
+/* Idle motion for the illustrated characters — small, continuous, alive */
+@keyframes idle-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-1.4deg); }
+}
+@keyframes blob-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+.hero-character, .about-character { animation: 6s ease-in-out infinite idle-float; }
+.hero-blob-char svg { display: block; animation: 5s ease-in-out infinite idle-float; }
+.hero-blob { animation: 8s ease-in-out infinite blob-pulse; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-character, .about-character, .hero-blob-char svg, .hero-blob { animation: none; }
+}
+
 /* Preloader */
 .preloader {
   position: fixed;
@@ -292,7 +320,9 @@ h4 { font-size: 16px; }
   will-change: transform;
   --mx: 0px;
   --my: 0px;
-  transform: translate3d(var(--mx), var(--my), 0);
+  --rx: 0deg;
+  --ry: 0deg;
+  transform: perspective(700px) rotateX(var(--rx)) rotateY(var(--ry)) translate3d(var(--mx), var(--my), 0);
 }
 .hero-card-question { top: 0; left: 10px; width: 240px; }
 .hero-card-title { margin: 0 0 6px; font-weight: 700; color: var(--ink); font-size: 15px; }
@@ -344,9 +374,10 @@ h4 { font-size: 16px; }
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform .72s cubic-bezier(.2,.72,.2,1);
+  transition: transform .72s cubic-bezier(.2,.72,.2,1), box-shadow .3s ease-out;
 }
 .category-card.is-flipped .category-card-inner { transform: rotateY(180deg); }
+.category-card:hover .category-card-inner { box-shadow: 0 22px 38px rgba(28,36,48,.22); }
 
 .category-front, .category-back {
   position: absolute;
@@ -469,10 +500,24 @@ h4 { font-size: 16px; }
   display: flex;
   align-items: flex-end;
   padding: 14px;
+  transition: transform .18s ease-out, box-shadow .25s ease-out;
 }
 .item-tall { grid-row: span 2; }
 .item-bg { position: absolute; inset: 0; transition: transform .3s ease; }
 .work:hover .item-bg { transform: scale(1.04); }
+.work:hover { box-shadow: 0 22px 40px rgba(28,36,48,.22); }
+/* Glossy highlight that follows the cursor, like light on a laminated print */
+.work::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  background: radial-gradient(220px circle at var(--px, 50%) var(--py, 50%), rgba(255,255,255,.22), transparent 60%);
+  transition: opacity .25s ease-out;
+  pointer-events: none;
+}
+.work:hover::after { opacity: 1; }
 .portfolio-tag {
   background: rgba(20,22,25,.75);
   color: #fff;
